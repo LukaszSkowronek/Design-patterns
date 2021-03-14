@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PaypalPaymentStrategy implements PaymentStrategy {
+public class PaypalPaymentMethodStrategy implements PaymentMethodStrategy {
   @Override
   public PaymentResult pay(PaymentInfo paymentInfo) {
     System.out.println("Paying by paypalMethod");

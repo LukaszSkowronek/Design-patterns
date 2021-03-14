@@ -1,6 +1,6 @@
 package com.patterns.designpatterns.creational.strategy.payment;
 
-public interface PaymentStrategy {
+public interface PaymentMethodStrategy {
 
   PaymentResult pay(PaymentInfo paymentInfo);
 

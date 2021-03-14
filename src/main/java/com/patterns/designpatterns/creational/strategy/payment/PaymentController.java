@@ -1,12 +1,11 @@
-package com.empik.cms.dynamic.configuration.service.adapter.api.payment;
+package com.patterns.designpatterns.creational.strategy.payment;
 
+import java.math.BigDecimal;
+import java.util.Arrays;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.math.BigDecimal;
-import java.util.Arrays;
 
 @RestController
 @RequestMapping("/api")

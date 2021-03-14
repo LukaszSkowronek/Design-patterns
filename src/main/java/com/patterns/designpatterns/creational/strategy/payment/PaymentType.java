@@ -1,4 +1,4 @@
-package com.empik.cms.dynamic.configuration.service.adapter.api.payment;
+package com.patterns.designpatterns.creational.strategy.payment;
 
 public enum PaymentType {
   PAYPAL, CREDIT_CARD, BANK_TRANSFER

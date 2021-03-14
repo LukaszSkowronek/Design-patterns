@@ -1,4 +1,4 @@
-package com.empik.cms.dynamic.configuration.service.adapter.api.payment;
+package com.patterns.designpatterns.creational.strategy.payment;
 
 import org.springframework.stereotype.Component;
 
@@ -12,7 +12,7 @@ public class PaymentService {
   }
 
   public PaymentResult pay(PaymentInfo paymentInfo) {
-    PaymentStrategy paymentMethod = paymentMethodFactory.getPaymentMethod(paymentInfo.getPaymentType());
+    PaymentMethodStrategy paymentMethod = paymentMethodFactory.getPaymentMethod(paymentInfo.getPaymentType());
     return paymentMethod.pay(paymentInfo);
 
   }

@@ -1,22 +1,21 @@
-package com.empik.cms.dynamic.configuration.service.adapter.api.payment;
-
-import org.springframework.stereotype.Component;
+package com.patterns.designpatterns.creational.strategy.payment;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentMethodFactory {
 
-  private final List<PaymentStrategy> paymentStrategies;
+  private final List<PaymentMethodStrategy> paymentStrategies;
 
-  public PaymentMethodFactory(List<PaymentStrategy> paymentStrategies) {
+  public PaymentMethodFactory(List<PaymentMethodStrategy> paymentStrategies) {
     this.paymentStrategies = paymentStrategies;
   }
 
-  public PaymentStrategy getPaymentMethod(PaymentType type) {
+  public PaymentMethodStrategy getPaymentMethod(PaymentType type) {
     return paymentStrategies.stream()
             .filter(it -> it.getType() == type)
             .findFirst()
-            .orElseThrow(() -> new IllegalArgumentException("PaymntType is not supported"));
+            .orElseThrow(() -> new IllegalArgumentException("PaymentType is not supported"));
   }
 }
